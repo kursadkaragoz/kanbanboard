@@ -3,7 +3,7 @@
     "noImplicitAny": false,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["es5", "es6", "DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,

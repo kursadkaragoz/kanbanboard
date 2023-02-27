@@ -86,7 +86,7 @@ const data  = [
 export default function Kanban() {
 
     const [tasks, setTasks] = useState(data);
-    const onDragEnd = (result : DropResult) => {
+    const onDragEnd = (result) => {
         if (!result.destination) return
         const { source, destination } = result
 
@@ -97,8 +97,8 @@ export default function Kanban() {
             const srcCol = tasks[srcColIdx]
             const destinationCol = tasks[destinationColIdx]
 
-            const srcTask = [ {...srcCol.tasks }]
-            const destinationTask = [ { ...destinationCol.tasks }]
+            const srcTask = [ ...srcCol.tasks ]
+            const destinationTask = [  ...destinationCol.tasks ]
 
             const [remove] = srcTask.splice(source.index, 1)
             destinationTask.splice(destination.index, 0, remove)
@@ -130,7 +130,7 @@ export default function Kanban() {
                                     </div>
                                     <div className="">
                                         {
-                                            section.tasks.map((task, index: number) => (
+                                            section.tasks.map((task, index) => (
                                                 <Draggable
                                                     key={task.id}
                                                     draggableId={task.id}
